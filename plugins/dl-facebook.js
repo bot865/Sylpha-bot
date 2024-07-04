@@ -9,6 +9,6 @@ await conn.sendFile(m.chat, SD || HD, 'fbdl.mp4', `> *Título* : ${title}`, m, n
 }}
 handler.help = ['fb *<link>*']
 handler.tags = ['dl'] 
-handler.command = /^(facebook|fb|facebookdl|fbdl)$/i
+handler.command = /^(فيس|fb|facebookdl|fbdl)$/i
 
 export default handler
