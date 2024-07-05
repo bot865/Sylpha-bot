@@ -6,25 +6,25 @@ const handler = async (m, { text, usedPrefix, command }) => {
     try {
       const inbox = await tempmail.createInbox();
       const mensajeCorreo = '*`𝐃𝐢𝐫𝐞𝐜𝐜𝐢𝐨𝐧 𝐝𝐞𝐥 𝐜𝐨𝐫𝐫𝐞𝐨 𝐭𝐞𝐦𝐩𝐨𝐫𝐚𝐥 :`*\n' + ` ${inbox.address}\n\n> ᴜɴ ᴛᴏᴋᴇɴ ᴘᴀʀᴀ ᴠᴇʀɪꜰɪᴄᴀʀ ᴇꜱᴛᴀ ʙᴀɴᴅᴇᴊᴀ ᴅᴇ ᴇɴᴛʀᴀᴅᴀ ꜱᴇ ᴇɴᴠɪᴀʀÁ ᴇɴ ᴇʟ ꜱɪɢᴜɪᴇɴᴛᴇ ᴍᴇɴꜱᴀᴊᴇ. Úꜱᴀʟᴏ ᴄᴏɴ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ .checkmail.\n\nToken: ${inbox.token}`;
-      const url = "https://i.imgur.com/wLYsnXG.jpeg";
+      const url = "https://atom.bio/elakrabelyotyobr";
       const responseImg = await axios.get(url, { responseType: 'arraybuffer' });
       await conn.sendFile(m.chat, responseImg.data, "thumbnail.png", mensajeCorreo, m, null, rcanal);
       
       await m.reply(inbox.token);
       await m.react("📧");
     } catch (error) {
-      console.error('Error al crear la dirección de correo temporal:', error);
-      await m.reply('*`No se pudo crear una dirección de correo temporal.`*');
+      console.error('حدث خطأ أثناء إنشاء عنوان بريد إلكتروني مؤقت:', error);
+      await m.reply('*`تعذر إنشاء عنوان بريد إلكتروني مؤقت.`*');
     }
   } else if (command === 'checkmail') {
     if (!text) {
-      await m.reply('*`Proporciona el toke del correo temporal que deseas verificar`*');
+      await m.reply('*`قم بتوفير رمز البريد الإلكتروني المؤقت الذي تريد التحقق منه`*');
       return;
     }
     try {
       const emails = await tempmail.checkInbox(text);
       if (!emails || emails.length === 0) {
-        await m.reply('*`No se encontraron mensajes o la bandeja de entrada ha expirado.`*');
+        await m.reply('*`لم يتم العثور على أي رسائل أو انتهت صلاحية البريد الوارد.`*');
         return;
       }
       const mensajes = emails.map(email => {
@@ -36,7 +36,7 @@ Cuerpo:
 ${email.body}
         `;
       }).join('\n\n---\n\n');
-      const mensajeRespuesta = '*`Mensajes en la bandeja de entrada :`*' + `\n\n${mensajes}`;
+      const mensajeRespuesta = '*`الرسائل في صندوق الوارد الخاص بك :`*' + `\n\n${mensajes}`;
       await m.reply(mensajeRespuesta);
     } catch {
     }
@@ -44,6 +44,6 @@ ${email.body}
 };
 handler.help = ['tempmail', 'checkmail <token>'];
 handler.tags = ['tools'];
-handler.command = ['tempmail', 'checkmail'];
+handler.command = ['tempmail', 'اميل'];
 handler.register = false;
 export default handler;
