@@ -29,19 +29,19 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       }
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
-      else return m.reply('*`La Url es invalida`*')
+      else return m.reply('*`عنوان URL غير صالح`*')
     }
   } catch (e) {
     console.error(e)
     if (!stiker) stiker = e
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
-    else return conn.reply(m.chat, '*`Responda a una Imagen o Vídeo.`*', m, rcanal)
+    else return conn.reply(m.chat, '*`الرد على صورة أو فيديو`*', m, rcanal)
   }
 }
 handler.help = ['sticker']
 handler.tags = ['sticker']
-handler.command = ['s', 'sticker', 'stiker'] 
+handler.command = ['s', 'ملصق', 'stiker'] 
 
 export default handler
 
