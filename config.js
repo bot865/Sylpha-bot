@@ -10,8 +10,8 @@ import moment from 'moment-timezone'
 //─────「 NUMEROS - OWNERS 」─────`*
 
 global.owner = [
-  ['5491126788746', 'JTxs', true],
-  ['51913091648', 'Gabriel Curi', true],
+  ['201028085788', 'ELAKRAB ELYOTUBER ', true],
+  ['201143638030', 'ELAKRAB ELYOTUBER ', true],
   ['']
 
 ]
@@ -24,11 +24,11 @@ global.prems = []
 //─────「 STICKERS | NOMBRES | CANAL 」─────`*
 
 global.packname = ``
-global.author = '@ 2024 JTxs | All rigths reserved'
+global.author = '@ 2024 ELAKRAB ELYOTUBER | تم تطوير هذا البوت بواسطه العقرب اليوتيوبر 🐍♥'
 
 global.botname = 'Sylpha - Bot'
 
-global.name_canal = '@ 2024 JTxs | All rigths reserved'
+global.name_canal = '@ 2024 ELAKRAB |  تم تطوير هذا البوت بواسطه العقرب اليوتيوبر 🐍♥'
 global.id_canal = '120363274577422945@newsletter'
 
 //─────「 IMAGENES 」─────`*
@@ -42,7 +42,7 @@ global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(fa
 
 //─────「 LINKS 」─────`*
 
-global.canal = 'https://whatsapp.com/channel/0029VaeQcFXEFeXtNMHk0D0n'
+global.canal = 'https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f'
 
 //─────「  OTROS 」─────`*
 
